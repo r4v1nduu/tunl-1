@@ -13,6 +13,7 @@ cargo --version
 # Install wasm32-unknown-unknown target (needed for Cloudflare Workers)
 rustup target add wasm32-unknown-unknown
 
-# Deploy with Wrangler
-echo "Deploying with Wrangler..."
-npx wrangler deploy
+# Build the project (Cloudflare Pages will handle deployment)
+echo "Building with worker-build..."
+cargo install -q worker-build
+worker-build --release

@@ -54,16 +54,16 @@ fn link(_: Request, cx: RouteContext<Config>) -> Result<Response> {
             "ps": "tunl",
             "v": "2",
             "add": "162.159.16.149",
-            "port": "80",
+            "port": "443",
             "id": uuid,
             "aid": "0",
             "scy": "zero",
             "net": "ws",
             "type": "none",
             "host": host,
-            "path": "",
-            "tls": "",
-            "sni": "",
+            "path": "/",
+            "tls": "tls",
+            "sni": host,
             "alpn": ""}
         );
         format!("vmess://{}", URL_SAFE.encode(config.to_string()))
