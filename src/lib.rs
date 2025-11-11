@@ -41,6 +41,7 @@ async fn tunnel(_: Request, cx: RouteContext<Config>) -> Result<Response> {
 }
 
 fn link(_: Request, cx: RouteContext<Config>) -> Result<Response> {
+    // Generate VMess configuration link with TLS enabled
     #[derive(Serialize)]
     struct Link {
         description: String,
