@@ -1,0 +1,9 @@
+# Cloudflare Pages build configuration
+
+# Build command that installs Rust and deploys
+build:
+  command: bash .cloudflare-build.sh
+  environment:
+    NODE_VERSION: 18
+    CARGO_HOME: /opt/buildhome/.cargo
+    RUSTUP_HOME: /opt/buildhome/.rustup
